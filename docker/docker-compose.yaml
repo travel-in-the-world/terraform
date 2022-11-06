@@ -1,0 +1,11 @@
+version: '3'
+services:
+  terraform-github:
+    build:
+      context: .
+    container_name: terraform-github
+    volumes:
+      - "../:/home/nakadats/terraform-github"
+    working_dir: "/home/nakadats/terraform-github"
+    tty: true
+    entrypoint: ash
